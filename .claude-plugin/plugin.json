@@ -1,0 +1,12 @@
+{
+  "name": "kaizen-please",
+  "version": "0.1.0",
+  "description": "Kaizen for any project, not just code: adopt incremental improvement as the guiding principle, break big tasks into small next steps, review progress, write a Kaizen assessment of the project, and uninstall cleanly.",
+  "author": {
+    "name": "Daniel Rosehill",
+    "url": "https://github.com/danielrosehill"
+  },
+  "repository": "https://github.com/danielrosehill/Kaizen-Please",
+  "license": "MIT",
+  "keywords": ["kaizen", "continuous-improvement", "productivity", "task-breakdown", "projects", "planning", "typst"]
+}

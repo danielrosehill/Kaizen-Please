@@ -1,0 +1,13 @@
+{
+  "schema": 1,
+  "plugin": "kaizen-please",
+  "kaizen_dir": "__KAIZEN_DIR__",
+  "adopted": "__DATE__",
+  "task_lists": [],
+  "reviews": [],
+  "next_review_id": 1,
+  "delivery": {
+    "email": null,
+    "documents": null
+  }
+}
