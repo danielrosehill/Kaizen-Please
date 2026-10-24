@@ -7,9 +7,11 @@ This project runs on Kaizen: progress through small, steady steps. The rules are
 - Big tasks and long lists are **broken into small steps first** (one action, one
   sitting, one owner, observable done), nested under the original item in the
   project's own task lists. Then work starts.
-- Steps are taken **one at a time**: do, check, record in `__KAIZEN_DIR__/log.md`,
-  then the next. User-owned steps are handed over ready to act on.
+- Steps are taken **one at a time**: do, check, record in the journal
+  (`__KAIZEN_DIR__/journal/`), then the next. User-owned steps are handed over ready to act on.
+- The journal is shared: the user writes in it too, in the same one-line format.
 - Anything noticed mid-step becomes a new task-list item, not part of the step.
 - Skills (plugin `kaizen-please`): `kaizen-breakdown`, `kaizen-next`,
-  `kaizen-review`, `kaizen-progress`, `kaizen-essay`, `kaizen-remove`.
+  `kaizen-journal`, `kaizen-review`, `kaizen-progress`,
+  `kaizen-thoughts`, `kaizen-remove`.
 <!-- kaizen-please:end -->

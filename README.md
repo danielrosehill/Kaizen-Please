@@ -18,7 +18,8 @@ The two can run in the same repo without sharing files.
 
 | Skill | What it does |
 | --- | --- |
-| `kaizen-essay` | Reads the project and writes an essay: what the project is, what it is trying to achieve, and how Kaizen applies. Typeset to PDF with Typst, saved in the project, delivered by your preferred email or document route |
+| `kaizen-thoughts` | The agent reads the project and gives its considered thoughts: what the project is, what it is trying to achieve, and how Kaizen could work here. Typeset to PDF with Typst, saved in the project, delivered by your preferred email or document route |
+| `kaizen-journal` | Sets up and keeps the Kaizen journal: a plain Markdown log of steps and improvements that you and the agent both write in, one line per entry |
 | `kaizen-adopt` | Makes Kaizen the guiding principle, for one project (a marked `CLAUDE.md` block and a small Kaizen folder) or for every project (a block in your user-level instructions) |
 | `kaizen-breakdown` | Splits big tasks or a pasted list into small steps, nested under the original items in your existing task lists. Never does the steps |
 | `kaizen-next` | Takes exactly one step: does it, or hands it to you ready to act on, then records it |
@@ -33,9 +34,11 @@ CLAUDE.md                 # a <!-- kaizen-please:begin/end --> block (project sc
 kaizen/                   # or inside an existing planning folder
 ├── PRINCIPLES.md         # the rules, copied in so they hold without the plugin
 ├── kaizen.json           # scope, task-list paths, reviews, delivery preferences
-├── log.md                # append-only: one line per step done, dropped or blocked
+├── journal/              # the Kaizen journal, shared by you and the agent
+│   ├── README.md         # the one-line entry format
+│   └── 2026-10.md        # one file per month, one heading per day
 ├── reviews/R001-<date>.md
-└── essays/<date>-kaizen-assessment.{typ,pdf}
+└── thoughts/<date>-kaizen-thoughts.{typ,pdf}
 ```
 
 Your task lists stay where they are. Breakdown adds nested steps under your items and
@@ -46,23 +49,41 @@ project gets its Kaizen folder the first time a Kaizen skill runs there.
 
 ## Typical flow
 
-1. `kaizen-essay`: get a written read of the project and where small steps would help.
+1. `kaizen-thoughts`: get the agent's written view of the project and where small steps would help.
 2. `kaizen-adopt`: once per project, or once at user level for all of them.
 3. `kaizen-breakdown`: whenever a task is too big or you have a new list.
 4. `kaizen-next`: repeatedly. "Next step", "what should I do now", "do the next three".
-5. `kaizen-review`: weekly or so.
-6. `kaizen-remove`: if you decide it is not for you.
+5. `kaizen-journal`: any time. "Journal that I called the recruiter", or just write a line yourself.
+6. `kaizen-review`: weekly or so.
+7. `kaizen-remove`: if you decide it is not for you.
 
-## Delivery of essays
+## The journal
 
-`kaizen-essay` does not assume an email provider or a cloud drive. It uses, in order:
+One line per entry, starting with a kind, under a heading for the day:
+
+```markdown
+## 2026-10-24 (Fri)
+- done (you): Sent the application to Acme through their careers page
+- done (agent): Drafted the Acme cover letter → applications/acme.md
+- improved: A cover-letter template cut drafting time to about 20 minutes
+- learned: Referrals get replies; cold applications mostly don't
+- next: Pick the two projects the Acme letter should lead with
+```
+
+Kinds: `done`, `dropped`, `blocked`, `improved`, `learned`, `note`, `next`. A line
+with no kind counts as a note. The agent appends in the same format and never edits
+earlier lines; reviews read the journal to see what moved and what got better.
+
+## Delivering the thoughts
+
+`kaizen-thoughts` does not assume an email provider or a cloud drive. It uses, in order:
 the preferences recorded in `kaizen.json`, the email and document skills your own
 instructions name, then whatever email and storage tools the session has. It asks
 before sending anything unless you asked for delivery in the same request.
 
 ## Requirements
 
-- [Typst](https://github.com/typst/typst) for PDF output. Without it, the essay is
+- [Typst](https://github.com/typst/typst) for PDF output. Without it, the thoughts are
   saved as `.typ` and Markdown.
 - Git is optional. In a repo, each step's changes are committed on their own.
 

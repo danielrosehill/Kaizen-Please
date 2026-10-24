@@ -43,7 +43,9 @@ A step is small enough when all of these hold:
   make) so the user's part is as small as possible. Then record the outcome they
   report.
 - **Record what happened.** Every step that is done, dropped or blocked gets one
-  line in `log.md`. Reviews measure progress from the log.
+  line in the journal, and so does anything that now works better (`improved`) or
+  changes how the work is done (`learned`). The user writes in the same journal, in
+  the same format. Reviews measure progress from it.
 
 ## Reviews
 
@@ -57,6 +59,6 @@ reviews; between reviews, work is step by step.
 | --- | --- |
 | `PRINCIPLES.md` | This document. Edit it to fit the project; re-running adopt never overwrites it. |
 | `kaizen.json` | Machine state: scope, task-list paths, last review, delivery preferences |
-| `log.md` | Append-only: one entry per step done, dropped or blocked |
+| `journal/` | The Kaizen journal: one file per month, one line per step or improvement, written by user and agent. Format in `journal/README.md` |
 | `reviews/` | One record per review |
-| `essays/` | Kaizen assessments of the project (Typst source and PDF) |
+| `thoughts/` | The agent's Kaizen thoughts on the project (Typst source and PDF) |

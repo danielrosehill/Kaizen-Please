@@ -42,11 +42,12 @@ next three", run the whole procedure three times in order, finishing each first.
    contacting someone) unless the user explicitly hands that action to you.
 
 5. **Close and log.** Tick the step in the task list. If that completes every child
-   of a parent, ask whether the parent is done too. Append a `log.md` entry in its
-   documented format.
+   of a parent, ask whether the parent is done too. Add a journal entry through
+   `kaizen-journal` (add mode): `done`, `dropped` or `blocked`, with the owner and
+   evidence. If the step made something work better, add an `improved` line too.
 
 6. **Commit**, if this is a git repo, the step's files, the task-list change and the
-   log entry together: `kaizen: <step wording>`. Stage only those files.
+   journal entry together: `kaizen: <step wording>`. Stage only those files.
 
 7. **Report** in two or three lines: what was done, the evidence, and what the next
    step is. Then stop, unless a count remains.

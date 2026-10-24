@@ -14,7 +14,7 @@ Installs Kaizen as the guiding principle, at one of two scopes:
   time a Kaizen skill runs there.
 
 Idempotent: run it again to repair a partial setup. It never overwrites an existing
-`PRINCIPLES.md`, `log.md`, `kaizen.json`, `reviews/` or `essays/`.
+`PRINCIPLES.md`, `kaizen.json`, `journal/`, `reviews/` or `thoughts/`.
 
 Works in any folder. Git is helpful (changes can be committed) but not required.
 
@@ -51,10 +51,10 @@ Works in any folder. Git is helpful (changes can be committed) but not required.
 
 5. **Write the folder** from `templates/`, creating only what is missing:
    - `PRINCIPLES.md` ← `templates/PRINCIPLES.md`
-   - `log.md` ← `templates/log.md`
    - `kaizen.json` ← `templates/kaizen.json`, with `__KAIZEN_DIR__` and `__DATE__`
      (ISO) replaced and `task_lists` set to the confirmed paths, relative to the root
-   - `reviews/` and `essays/` are created by the skills that write into them.
+   - `journal/`: set up by `kaizen-journal` (set-up mode).
+   - `reviews/` and `thoughts/` are created by the skills that write into them.
 
 6. **Add the instructions block.** Take `templates/claude-md-project.md`, replace
    `__KAIZEN_DIR__`. In the project-root `CLAUDE.md` (create it if absent; also
@@ -75,7 +75,7 @@ Works in any folder. Git is helpful (changes can be committed) but not required.
    `kaizen: adopt incremental improvement`.
 
 9. **Report** in a few lines: `KAIZEN_DIR`, the task lists in use, and the next step,
-   usually `kaizen-essay` (a written assessment of the project) or
+   usually `kaizen-thoughts` (the agent's written view of the project) or
    `kaizen-breakdown`.
 
 ## Steps — user scope

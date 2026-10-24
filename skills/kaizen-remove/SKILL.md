@@ -25,10 +25,10 @@ them, which are now the user's content.
      plugin install.
    Show the inventory and what will happen to each item.
 
-2. **Ask what to do with the Kaizen folder**, once: **keep** it (the log and reviews
+2. **Ask what to do with the Kaizen folder**, once: **keep** it (the journal and reviews
    stay as a record), **archive** it (move to `<parent>/archive/kaizen-<YYYY-MM-DD>/`),
    or **delete** it. Default is keep. Delete only on an explicit answer, and remind
-   the user it holds the log, reviews and essays.
+   the user it holds the journal (including the user's own entries), reviews and thoughts.
 
 3. **Remove the instruction blocks.** Delete everything from
    `<!-- kaizen-please:begin -->` through `<!-- kaizen-please:end -->` inclusive,

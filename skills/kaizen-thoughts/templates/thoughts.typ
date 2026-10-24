@@ -1,5 +1,5 @@
-// Kaizen assessment — fill the placeholders, keep the structure.
-// Compile: typst compile essay.typ essay.pdf
+// Kaizen thoughts — fill the placeholders, keep the structure.
+// Compile: typst compile thoughts.typ thoughts.pdf
 
 #let title = "__TITLE__"
 #let project = "__PROJECT__"
@@ -12,7 +12,7 @@
   numbering: "1",
   footer: context [
     #set text(size: 8.5pt, fill: luma(110))
-    #project — Kaizen assessment #h(1fr) #counter(page).display()
+    #project — Kaizen thoughts #h(1fr) #counter(page).display()
   ],
 )
 #set text(size: 11pt, lang: "en")
@@ -25,7 +25,7 @@
 #show heading.where(level: 2): set text(size: 12pt, weight: "semibold")
 
 #align(left)[
-  #text(size: 9pt, fill: luma(110), tracking: 0.08em)[KAIZEN ASSESSMENT]
+  #text(size: 9pt, fill: luma(110), tracking: 0.08em)[KAIZEN THOUGHTS]
   #v(0.2em)
   #text(size: 22pt, weight: "bold")[#title]
   #v(0.1em)
@@ -43,7 +43,7 @@
   __SUMMARY__
 ]
 
-= What this project is
+= What this project is, as I read it
 
 __SECTION_1__
 
@@ -51,7 +51,7 @@ __SECTION_1__
 
 __SECTION_2__
 
-= Bringing Kaizen to bear
+= How Kaizen could work here
 
 __SECTION_3__
 
@@ -62,7 +62,7 @@ __FIRST_STEPS__
 
 #v(1.5em)
 #text(size: 8.5pt, fill: luma(110))[
-  Written by an AI agent from the contents of the project folder on #date.
+  The thoughts of an AI agent, from the contents of the project folder on #date.
   Statements marked _(inferred)_ are the agent's reading rather than something the
   project states.
 ]

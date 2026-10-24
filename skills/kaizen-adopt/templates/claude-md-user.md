@@ -10,8 +10,9 @@ Work in every project follows Kaizen: progress through small, steady steps.
   steps are handed over ready to act on.
 - Anything noticed mid-step becomes a new task-list item, not part of the step.
 - If a project has a Kaizen folder (`*/kaizen/kaizen.json` with
-  `"plugin": "kaizen-please"`), follow its `PRINCIPLES.md` and log steps in its
-  `log.md`. If it has none, the first `kaizen-breakdown` or `kaizen-next` creates one.
+  `"plugin": "kaizen-please"`), follow its `PRINCIPLES.md` and record steps in its
+  journal. If it has none, the first `kaizen-breakdown` or `kaizen-next` creates one.
 - Skills (plugin `kaizen-please`): `kaizen-breakdown`, `kaizen-next`,
-  `kaizen-review`, `kaizen-progress`, `kaizen-essay`, `kaizen-remove`.
+  `kaizen-journal`, `kaizen-review`, `kaizen-progress`,
+  `kaizen-thoughts`, `kaizen-remove`.
 <!-- kaizen-please:end -->

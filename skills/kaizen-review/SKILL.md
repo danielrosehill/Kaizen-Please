@@ -11,12 +11,14 @@ hold. It re-splits stuck items and adds new ones. It does not take steps itself.
 ## Steps
 
 1. **Locate Kaizen** as `kaizen-breakdown` step 1 does. Read `PRINCIPLES.md`,
-   `kaizen.json`, the task lists, `log.md`, and the latest file in `reviews/`.
+   `kaizen.json`, the task lists, the journal, and the latest file in `reviews/`.
    `SINCE` is the date of the last review, or the `adopted` date if there is none.
 
-2. **Measure since `SINCE`**, from `log.md` (and `git log --since` if in a repo):
+2. **Measure since `SINCE`**, from the journal (and `git log --since` if in a repo):
    - steps done, dropped and blocked, split by agent and user;
-   - items with open steps that had no log entry in that time: these are stalled;
+   - items with open steps that had no journal entry in that time: these are stalled;
+   - the `improved` and `learned` entries: what got better, in the user's words and
+     the agent's;
    - new files and notes in the project that are not reflected in the task lists.
 
 3. **Ask the user two short questions** before judging, and use their answers:
@@ -41,6 +43,8 @@ hold. It re-splits stuck items and adds new ones. It does not take steps itself.
    <steps done, by item; counts by owner>
    ## Stalled, and what we did about it
    <item — reason — split / unblocked / question asked / dropped>
+   ## Improved
+   <the improved and learned entries since SINCE>
    ## New
    <items added>
    ## Next three steps
@@ -48,7 +52,8 @@ hold. It re-splits stuck items and adds new ones. It does not take steps itself.
    ```
 
 7. **Update `kaizen.json`**: append `{"review": "R<NNN>", "date": "<ISO>"}` to
-   `reviews`, increment `next_review_id`. Commit review, task lists, log and state
+   `reviews`, increment `next_review_id`. Add a `note:` journal entry linking the review. Commit review,
+   task lists, journal and state
    together, if in a repo: `kaizen: review R<NNN>`.
 
 8. **Report** the short version: what moved, what was unstuck, the next three steps.
